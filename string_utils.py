@@ -17,19 +17,18 @@ def split_before_each_uppercases(formula):
 
 
 def split_at_first_digit(formula):
-    digit_l = 1
+    digit_place = 1
     for i in formula[1:]:
-        if i.isdigit():
-            break
-        else:
-            digit_l += 1
-            
-        prefix = formula[:digit_l]
-        num_p = formula[digit_l:]
-        if digit_1 == len(formula):
-            return (formula, 1)
-    return(prefix, int(num_p))
-    num_p = formula[digit_l:]
-    if digit_1 == len(formula):
-        return(formula, 1)
-    return(prefix, int(num_p))
+      if i.isdigit():
+        break
+
+      else:
+        digit_place += 1
+
+    prefix = formula[:digit_place]
+    num_pos = formula[digit_place:]
+
+    if digit_place == len(formula):
+        return (formula, 1)
+
+    return (prefix, int(num_pos))
