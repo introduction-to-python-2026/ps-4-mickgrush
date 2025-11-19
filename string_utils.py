@@ -6,7 +6,7 @@ def split_before_each_uppercases(formula):
     split_ = []
     for i in formula[1:]:
         if i.supper():
-            split_formula.append(formula[start:end]
+            split_formula.append(formula[start:end])
             start = end
             end = start + 1
         else:
@@ -21,8 +21,14 @@ def split_at_first_digit(formula):
     for i in formula[1:]:
         if i.isdigit():
             break
-        else digit_l += 1
-    prefix = formula[:digit_l]
+        else:
+            digit_l += 1
+            
+        prefix = formula[:digit_l]
+        num_p = formula[digit_l:]
+        if digit_1 == len(formula):
+            return (formula, 1)
+    return(prefix, int(num_p))
     num_p = formula[digit_l:]
     if digit_1 == len(formula):
         return(formula, 1)
