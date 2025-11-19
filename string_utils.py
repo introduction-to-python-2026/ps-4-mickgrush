@@ -1,20 +1,21 @@
 def split_before_each_uppercases(formula):
     if formula == "":
-        return[]
+        return []
     start = 0
     end = 1
-    split_ = []
+    split_form = []
     for i in formula[1:]:
-        if i.supper():
-            split_formula.append(formula[start:end])
-            start = end
-            end = start + 1
-        else:
-            end += 1
-        split_formula.append(formula[start:end])
-        return(split_formula)
-        
+      
+      if i.isupper():
+          split_form.append(formula[start:end])
+          start = end
+          end = start + 1
 
+      else: 
+        end += 1
+
+    split_form.append(formula[start:end])
+    return(split_formula)
 
 def split_at_first_digit(formula):
     digit_place = 1
