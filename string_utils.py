@@ -15,7 +15,7 @@ def split_before_each_uppercases(formula):
         end += 1
 
     split_form.append(formula[start:end])
-    return(split_formula)
+    return(split_form)
 
 def split_at_first_digit(formula):
     digit_place = 1
